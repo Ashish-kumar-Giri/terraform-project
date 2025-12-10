@@ -12,9 +12,9 @@ provider "aws" {
 }
 resource "random_integer" "rand" {
     min = 1000
-    max = 9999
+    max = 9998
 }
+
 resource "aws_s3_bucket" "demo" {
-  bucket = "tf-basics-${random_integer.rand.result}"
-  
+  bucket = "${var.bucket_item}-${random_integer.rand.result}"
 }
