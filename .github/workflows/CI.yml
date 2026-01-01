@@ -33,4 +33,5 @@ jobs:
       - name: Run a multi-line script
         run: |
           echo Add other actions to build Ashish, 
-          echo test, and deploy your project ashish u can do it.
+          echo test, and deploy your project ashish u can do it,
+          echo its working.
