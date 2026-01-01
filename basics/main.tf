@@ -7,7 +7,7 @@ terraform {
   }
 }
 provider "aws" {
-  region = "eu-west-1"
+  region = "us-west-1"
   
 }
 resource "random_integer" "rand" {
