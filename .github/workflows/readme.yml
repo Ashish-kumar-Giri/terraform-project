@@ -16,10 +16,18 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+        strategy:
+  matrix:
+    dir:
+      - basics
+      - terraform-ec2-demo
+
       - name: Generate Terraform docs
         uses: terraform-docs/gh-actions@v1.3.0
         with:
-          working-dir: basics
+          working-dir: ${{ matrix.dir }}
           output-file: README.md
           output-method: inject
           git-push: "true"
+
+
