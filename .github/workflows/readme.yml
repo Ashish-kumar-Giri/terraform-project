@@ -16,11 +16,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-        strategy:
-  matrix:
-    dir:
-      - basics
-      - terraform-ec2-demo
+        
 
       - name: Generate Terraform docs
         uses: terraform-docs/gh-actions@v1.3.0
